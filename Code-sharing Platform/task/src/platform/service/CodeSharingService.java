@@ -46,13 +46,9 @@ public class CodeSharingService {
 
         StreamSupport.stream(snippetRepository.findValidLatestTop10().spliterator(), false)
                 .forEach(s -> {
-                    if (s.validate()) {
                         s.updateViews();
                         snippetRepository.save(s);
                         out.add(s);
-                    } else {
-                        snippetRepository.delete(s);
-                    }
                 });
         return out;
     }
