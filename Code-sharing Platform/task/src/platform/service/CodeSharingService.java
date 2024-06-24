@@ -44,7 +44,7 @@ public class CodeSharingService {
     public List<CodeSnippet> getTenLastSnippets() {
         List<CodeSnippet> out = new ArrayList<>();
 
-        StreamSupport.stream(snippetRepository.findValidLatestTop10().spliterator(), false)
+        StreamSupport.stream(snippetRepository.findUnrestrictedLatestTop10().spliterator(), false)
                 .forEach(s -> {
                     s.updateViews();
                     snippetRepository.save(s);

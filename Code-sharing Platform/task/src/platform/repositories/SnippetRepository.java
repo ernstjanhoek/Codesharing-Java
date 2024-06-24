@@ -13,5 +13,5 @@ public interface SnippetRepository extends CrudRepository<CodeSnippet, UUID> {
             "LIMIT 10",
             nativeQuery = true
     )
-    Iterable<CodeSnippet> findValidLatestTop10();
+    Iterable<CodeSnippet> findUnrestrictedLatestTop10();
 }
