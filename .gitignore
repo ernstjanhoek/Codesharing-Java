@@ -1,0 +1,17 @@
+# course config files
+*.yaml
+
+# gradle
+.gradle/
+build
+
+
+# idea config
+.idea
+
+# old stages
+/Code-sharing Platform/*
+!/Code-sharing Platform/task/
+/Code-sharing Platform/task/*
+!/Code-sharing Platform/task/src
+!/Code-sharing Platform/task/build.gradle
